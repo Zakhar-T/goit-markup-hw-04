@@ -136,6 +136,7 @@ img {
   color: #434455;
   padding: 24px 0;
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
@@ -189,11 +190,12 @@ img {
   background: #4d5ae5;
   border: none;
   min-width: 169px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
 .hero-button:focus {
-  background: #404bbf;
+  background-color: #404bbf;
 }
 
 /* #endregion */
@@ -226,6 +228,9 @@ img {
 }
 
 .benefits-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   width: 100%;
@@ -286,7 +291,7 @@ img {
 }
 
 .team-item-text-wrapper {
-  padding: 32px 0;
+  padding: 32px 16px;
 }
 
 .team-subtitle {
@@ -304,6 +309,30 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
+  margin-bottom: 8px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-item:hover,
+.social-item:focus {
+  background-color: #404bbf;
+  cursor: pointer;
 }
 
 /* #endregion */
@@ -322,6 +351,7 @@ img {
 
 .portfolio-item {
   width: calc((100% - 2 * 24) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover,
@@ -329,6 +359,32 @@ img {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 
     0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  cursor: pointer;
+}
+
+.overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-descr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px 32px;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  background-color: #4d5ae5;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover .img-descr {
+  transform: translateY(0);
 }
 
 .portfolio-subtitle {
@@ -390,6 +446,23 @@ img {
 .footer-social > .footer-text {
   font-weight: 500;
   color: #fff;
+  margin-bottom: 16px;
+}
+
+.footer-social .social-list {
+  display: flex;
+  width: 208px;
+  gap: 16px;
+}
+
+.footer-social .social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-social .social-item:hover,
+.footer-social .social-item:focus {
+  background-color: #31d0aa;
 }
 
 /* #endregion */
